@@ -1,7 +1,15 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
-const Alert = () => {
-  return <h2>alert component</h2>
+const Alert = ({ text }) => {
+  if (text === "Item Removed") {
+    return (
+      <div className="alert alert-danger">{text}</div>
+    )
+  } else {
+    return (
+      <div className="alert alert-success">{text}</div>
+    )
+  }
 }
 
 export default Alert
